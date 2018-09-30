@@ -1,0 +1,17 @@
+{
+    "name": "wildcodeschool/quete_simple_mvc",
+    "authors": [
+        {
+            "name": "julie delmas",
+            "email": "projetwild@gmail.com"
+        }
+    ],
+    "require": {
+        "ext-pdo": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "": "src/"
+        }
+    }
+}
