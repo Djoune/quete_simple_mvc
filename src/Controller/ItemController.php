@@ -24,5 +24,3 @@ class ItemController {
         require __DIR__ . '/../View/showItem.php';
     }
 }
-
-?>

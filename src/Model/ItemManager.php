@@ -30,8 +30,4 @@ class ItemManager {
         $statement->execute();
         return $statement->fetch();
     }
-
-
 }
-
-?>

@@ -24,5 +24,3 @@ class CategoryController {
         require __DIR__ . '/../View/showCategory.php';
     }
 }
-
-?>

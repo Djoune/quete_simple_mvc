@@ -30,8 +30,4 @@ class CategoryManager {
         $statement->execute();
         return $statement->fetch();
     }
-
-
 }
-
-?>
