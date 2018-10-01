@@ -6,9 +6,10 @@
     <h1>Items</h1>
     <ul>
         <?php foreach ($itemManager as $item) : ?>
-            <li><?= $item['title'] ?></li>
+            <li><a href='item/<?= $item['id'] ?>'><?= $item['title'] ?></a></li>
         <?php endforeach ?>
     </ul>
+    <a href="/categories">Back to category</a>
 </section>
 </body>
 </html>
