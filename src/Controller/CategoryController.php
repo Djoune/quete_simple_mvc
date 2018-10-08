@@ -3,24 +3,20 @@ namespace Controller;
 // src/Controller/ItemController.php
 use Model\CategoryManager;
 
-class CategoryController {
+class CategoryController extends AbstractController {
     /**
      * @param $categoryManager
      */
-    public function index()
-    {
+    public function index(){
         $categoryManager = new CategoryManager();
-        $categoryManager = $categoryManager->selectAllCategories();
-        require __DIR__ . '/../View/category.php';
-
-        return $categoryManager;
+        $categories = $categoryManager->selectAllCategories();
+        return $this->twig->render('Category/index.html.twig', ['categories' => $categories]);
     }
 
     public function show(int $id)
     {
         $categoryManager = new CategoryManager();
         $category = $categoryManager->selectOneCategory($id);
-
-        require __DIR__ . '/../View/showCategory.php';
+        return $this->twig->render('Category/showCategory.html.twig', ['category' => $category]);
     }
 }
